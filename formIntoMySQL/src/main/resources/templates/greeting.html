@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <br><br>
+    <h2 style="color:green">Form</h2>
+        <br><br>
+
+        <form class="form-horizontal" role="form" action="#" th:action="@{/greeting}" th:object="${user}" method="post">
+
+            <div class="form-group" style="width:300px">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text"  th:field="*{name}" class="form-control" id="name" placeholder="Enter name">
+                </div>
+            </div>
+
+            <div class="form-group" style="width:300px">
+                <label for="age" class="col-sm-2 control-label">Age</label>
+                <div class="col-sm-10">
+                    <input type="text" th:field="*{age}" class="form-control" id="age" placeholder="Enter age">
+                </div>
+            </div>
+
+            <div class="form-group" style="width:300px">
+                <label for="gender" class="col-sm-2 control-label">Gender</label>
+                <div class="col-sm-10">
+                    <input type="text" th:field="*{gender}" class="form-control" id="gender" placeholder="Enter gender(M or F)">
+                </div>
+            </div>
+
+            <div class="form-group" style="width:300px">
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" th:field="*{email}" class="form-control" id="email" placeholder="Enter email">
+                </div>
+            </div>
+
+            <div class="form-group" style="width:300px">
+                <label for="city" class="col-sm-2 control-label">City</label>
+                <div class="col-sm-10">
+                    <input type="text" th:field="*{city}" class="form-control" id="city" placeholder="Enter city">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-primary" id="btn">Submit</button>
+                    <input type="reset" class="btn btn-warning" value="Reset" />
+                </div>
+            </div>
+        </form>
+
+    </center>
+
+</body>
+
+</html>

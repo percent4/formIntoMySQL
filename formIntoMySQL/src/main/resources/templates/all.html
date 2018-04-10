@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>User list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+
+<center>
+    <br><br>
+<h2 style="color:green">All Records in Table user</h2>
+    <br><br>
+
+<table class="table table-bordered table table-hover" style="width:800px">
+    <tr style="color:red">
+        <th>NAME</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>City</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}">Jack</td>
+        <td th:text="${user.age}">24</td>
+        <td th:text="${user.gender}">M</td>
+        <td th:text="${user.email}">jack@gmail.com</td>
+        <td th:text="${user.city}">New York</td>
+    </tr>
+</table>
+
+<p>
+    <a href="/greeting"><button type="button" class="btn btn-primary">Return to home</button></a>
+</p>
+
+</center>
+</body>
+
+</html>
